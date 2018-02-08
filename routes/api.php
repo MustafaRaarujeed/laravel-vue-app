@@ -18,3 +18,4 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('/data', 'Api\DisplayApiController@apiData');
+Route::post('/data', 'Api\DisplayApiController@apiDataUpload');

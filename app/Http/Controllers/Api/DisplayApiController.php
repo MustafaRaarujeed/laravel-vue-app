@@ -12,4 +12,8 @@ class DisplayApiController extends Controller {
         $hotels = Hotel::with('rooms')->get();
         return HotelResource::collection($hotels);
     }
+
+    public function apiDataUpload(Request $request) {
+        
+    }
 }
