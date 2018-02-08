@@ -3,5 +3,5 @@
     - Upload Data
 @endsection
 @section('content')
-
+<upload-data></upload-data>
 @endsection

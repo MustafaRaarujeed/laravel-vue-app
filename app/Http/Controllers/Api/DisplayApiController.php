@@ -14,6 +14,9 @@ class DisplayApiController extends Controller {
     }
 
     public function apiDataUpload(Request $request) {
-        
+        // $this->validate($request, [
+        //     'files' => 'required',
+        // ]);
+        return "DONE";
     }
 }
