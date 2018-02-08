@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>XML Vue - @yield('title')</title>
+	<title>XML Vue @yield('title')</title>
 
 	<!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -38,7 +38,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">  
                         <li>
-                            <a>Display Hotels</a>
+                            <a href="{{ route('data.display') }}">Display Hotels</a>
                         </li>
                         <li>
                             <a>Upload Data</a>

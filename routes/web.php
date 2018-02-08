@@ -10,4 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'DisplayController@index');
+Route::get('/', [
+    'uses' => 'DisplayController@index',
+    'as' => 'data.display'
+]);
