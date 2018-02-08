@@ -12,8 +12,11 @@ class RoomResource extends Resource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    public function toArray($request)
-    {
-        return parent::toArray($request);
+    public function toArray($request) {
+        return [
+            'id' => $this->id,
+            'room_name' => $this->room_name,
+        ];
+        // return parent::toArray($request);
     }
 }
