@@ -15,7 +15,12 @@ Route::get('/', [
     'as' => 'data.display'
 ]);
 
-// Route::get('/upload',[
-//     'uses' => 'DisplayController@storeData',
-//     'as' => 'data.upload'
-// ]);
+Route::get('/upload',[
+    'uses' => 'DisplayController@dataIndex',
+    'as' => 'data.upload'
+]);
+
+Route::post('/upload', [
+    'uses' => 'DisplayController@storeData',
+    'as' => 'data.store'
+]);

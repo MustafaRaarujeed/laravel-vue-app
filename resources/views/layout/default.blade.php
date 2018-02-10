@@ -41,7 +41,7 @@
                             <a href="{{ route('data.display') }}">Display Hotels</a>
                         </li>
                         <li>
-                            <a href="#">Upload Data</a>
+                            <a href="{{ route('data.upload') }}">Upload Data</a>
                         </li>
                     </ul>
                     <!-- Right Side Of Navbar -->

@@ -15,7 +15,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('display-data', require('./components/DisplayData.vue'));
-Vue.component('upload-data', require('./components/UploadData.vue'));
+// Vue.component('upload-data', require('./components/UploadData.vue'));
 
 const app = new Vue({
     el: '#app'
