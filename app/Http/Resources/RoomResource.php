@@ -16,6 +16,8 @@ class RoomResource extends Resource
         return [
             'id' => $this->id,
             'room_name' => $this->room_name,
+            'room_status' => $this->room_status,
+            'room_occupancy' => $this->room_occupancy,
         ];
         // return parent::toArray($request);
     }
