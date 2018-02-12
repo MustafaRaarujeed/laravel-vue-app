@@ -10,6 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => 'DisplayController@index',
+    'as' => 'data.display'
+]);
+
+Route::get('/upload',[
+    'uses' => 'DisplayController@dataIndex',
+    'as' => 'data.upload'
+]);
+
+Route::post('/upload', [
+    'uses' => 'DisplayController@storeData',
+    'as' => 'data.store'
+]);
