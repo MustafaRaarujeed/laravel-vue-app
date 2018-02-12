@@ -28,14 +28,13 @@ class DisplayController extends Controller {
             // return with Errors
             return redirect()->back();
         }
-        // Extract data form file using simplexml_load_file
-        // Save data to the database in Hotel and Room tables
-        // Return to home page after successful upload and extract
     }
 
     private function processUpload($file) {
         // get path name
         $filePathName = simplexml_load_file($file->getPathName());
+        // Extract data form file using simplexml_load_file
+        // Save data to the database in Hotel and Room tables
         foreach($filePathName->HOTELS as $keyHotels => $valueHotel){
     		foreach($valueHotel as $data => $rooms){
 		    	$hotelData = new Hotel();
@@ -59,6 +58,7 @@ class DisplayController extends Controller {
 	    		}
     		}
         }
+        // Return to home page after successful upload and extract
         return redirect('/');
     }
 }

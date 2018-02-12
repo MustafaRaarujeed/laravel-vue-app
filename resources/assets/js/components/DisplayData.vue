@@ -45,16 +45,19 @@
         data () {
             return {
                 hotels: [],
+                /* For filtering xml data purposes
                 value: 'asc',
                 buttonValue: 'Asc',
                 sortValue: true
+                */
             }
         },
         mounted() {
             axios.get('/api/data').then((response) => {
                 this.hotels = response.data;
             });
-        },/*
+        },
+        /* For filtering xml data purposes
         computed: {
             defaultFilter() {
                 axios.get('/api/data/' + this.value).then((response) => {
@@ -62,7 +65,7 @@
                 });
                 return this.hotels;
             }
-        },*/
+        },
         methods: {
             ascSort() {
                 this.value = 'desc';
@@ -75,6 +78,6 @@
                 this.buttonValue = 'ASC';
                 this.sortValue = true;
             }
-        }
+        }*/
     }
 </script>

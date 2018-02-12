@@ -12,7 +12,7 @@ class DisplayApiController extends Controller {
         $hotels = Hotel::with('rooms')->get();
         return HotelResource::collection($hotels);
     }
-
+    /* Filter purposes
     public function apiDataAsc() {
         $hotels = Hotel::with('rooms')->nameAsc()->get();
         return HotelResource::collection($hotels);
@@ -22,4 +22,5 @@ class DisplayApiController extends Controller {
         $hotels = Hotel::with('rooms')->nameDes()->get();
         return HotelResource::collection($hotels);
     }
+    */
 }

@@ -43115,10 +43115,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            hotels: [],
+            hotels: []
+            /* For filtering xml data purposes
             value: 'asc',
             buttonValue: 'Asc',
             sortValue: true
+            */
         };
     },
     mounted: function mounted() {
@@ -43127,28 +43129,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get('/api/data').then(function (response) {
             _this.hotels = response.data;
         });
-    },
-    /*
-    computed: {
-      defaultFilter() {
-          axios.get('/api/data/' + this.value).then((response) => {
-              this.hotels = response.data;
-          });
-          return this.hotels;
-      }
-    },*/
-    methods: {
-        ascSort: function ascSort() {
-            this.value = 'desc';
-            this.sortValue = false;
-            this.sortValue = !this.sortValue;
-            this.buttonValue = 'DESC';
-        },
-        descSort: function descSort() {
-            this.value = 'asc';
-            this.buttonValue = 'ASC';
-            this.sortValue = true;
-        }
     }
 });
 
