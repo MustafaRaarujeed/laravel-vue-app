@@ -5,6 +5,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong>Filter By:</strong>
+                        <!-- <span><button @click="ascSort()">{{ buttonValue }}</button></span> -->
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -43,13 +44,37 @@
     export default {
         data () {
             return {
-                hotels: []
+                hotels: [],
+                value: 'asc',
+                buttonValue: 'Asc',
+                sortValue: true
             }
         },
         mounted() {
             axios.get('/api/data').then((response) => {
                 this.hotels = response.data;
             });
+        },/*
+        computed: {
+            defaultFilter() {
+                axios.get('/api/data/' + this.value).then((response) => {
+                    this.hotels = response.data;
+                });
+                return this.hotels;
+            }
+        },*/
+        methods: {
+            ascSort() {
+                this.value = 'desc';
+                this.sortValue = false;
+                this.sortValue = !this.sortValue;
+                this.buttonValue = 'DESC';
+            },
+            descSort() {
+                this.value = 'asc';
+                this.buttonValue = 'ASC';
+                this.sortValue = true;
+            }
         }
     }
 </script>

@@ -13,10 +13,13 @@ class DisplayApiController extends Controller {
         return HotelResource::collection($hotels);
     }
 
-    public function apiDataUpload(Request $request) {
-        // $this->validate($request, [
-        //     'files' => 'required',
-        // ]);
-        return "DONE";
+    public function apiDataAsc() {
+        $hotels = Hotel::with('rooms')->nameAsc()->get();
+        return HotelResource::collection($hotels);
+    }
+
+    public function apiDataDesc() {
+        $hotels = Hotel::with('rooms')->nameDes()->get();
+        return HotelResource::collection($hotels);
     }
 }

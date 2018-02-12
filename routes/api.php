@@ -19,3 +19,6 @@ use Illuminate\Http\Request;
 
 Route::get('/data', 'Api\DisplayApiController@apiData');
 Route::post('/data', 'Api\DisplayApiController@apiDataUpload');
+
+Route::get('/data/asc', 'Api\DisplayApiController@apiDataAsc');
+Route::get('/data/desc', 'Api\DisplayApiController@apiDataDesc');
